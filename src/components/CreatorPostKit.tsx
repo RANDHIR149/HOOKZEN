@@ -5,14 +5,14 @@ import {
   Check, 
   Clock, 
   Hash, 
-  Flame, 
   Lightbulb, 
   FileText, 
   RotateCcw, 
   Smartphone,
   Share2,
   TrendingUp,
-  SlidersHorizontal
+  SlidersHorizontal,
+  Flame
 } from 'lucide-react';
 import { ViralContent, PlatformId } from '../types';
 

@@ -33,10 +33,10 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     <nav
       id="bottom-dock-navigation"
       aria-label="Bottom Navigation"
-      className="fixed bottom-0 left-0 right-0 z-50 px-3 pb-3 sm:pb-4 pt-1 pointer-events-none"
+      className="fixed bottom-0 left-0 right-0 z-50 px-2 sm:px-3 pb-3 sm:pb-4 pt-1 pointer-events-none"
     >
-      <div className="max-w-md mx-auto pointer-events-auto">
-        <div className="bg-zinc-950/95 backdrop-blur-2xl border border-zinc-800 rounded-3xl p-2 sm:p-2.5 shadow-2xl shadow-black ring-1 ring-white/10 flex items-center justify-around gap-1">
+      <div className="max-w-lg mx-auto pointer-events-auto">
+        <div className="bg-zinc-950/95 backdrop-blur-2xl border border-zinc-800 rounded-3xl p-1.5 sm:p-2.5 shadow-2xl shadow-black ring-1 ring-white/10 flex items-center justify-around gap-1">
           
           {/* 1. Home Button */}
           <button
@@ -51,13 +51,13 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             title="Home - Studio & Media Upload"
           >
             <div
-              className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all ${
+              className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all ${
                 activeCategory === 'home' || activeCategory === null
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-2 ring-white/30 scale-105'
                   : 'bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700 group-hover:bg-zinc-850'
               }`}
             >
-              <Home className="w-5 h-5" />
+              <Home className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <span className="text-[10px] font-semibold mt-1 tracking-tight">Home</span>
           </button>
@@ -74,13 +74,13 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             title={`Platform: ${platform}`}
           >
             <div
-              className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all relative ${
+              className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all relative ${
                 activeCategory === 'platform'
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-2 ring-white/30 scale-105'
                   : 'bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700'
               }`}
             >
-              <Compass className="w-5 h-5" />
+              <Compass className="w-4 h-4 sm:w-5 sm:h-5" />
               <span className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-white rounded-full ring-2 ring-black" />
             </div>
             <span className="text-[10px] font-medium mt-1 max-w-[54px] truncate text-center">
@@ -100,13 +100,13 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             title={`Tone: ${tone}`}
           >
             <div
-              className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all ${
+              className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all ${
                 activeCategory === 'tone'
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-2 ring-white/30 scale-105'
                   : 'bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700'
               }`}
             >
-              <Layers className="w-5 h-5" />
+              <Layers className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <span className="text-[10px] font-medium mt-1 max-w-[50px] truncate text-center">
               Tone
@@ -125,13 +125,13 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             title={`Goal: ${goal}`}
           >
             <div
-              className={`w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all ${
+              className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all ${
                 activeCategory === 'goal'
                   ? 'bg-white text-black shadow-lg shadow-white/10 ring-2 ring-white/30 scale-105'
                   : 'bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700'
               }`}
             >
-              <Target className="w-5 h-5" />
+              <Target className="w-4 h-4 sm:w-5 sm:h-5" />
             </div>
             <span className="text-[10px] font-medium mt-1 max-w-[48px] truncate text-center">
               Goal
@@ -146,8 +146,8 @@ export const BottomNav: React.FC<BottomNavProps> = ({
             className="flex flex-col items-center justify-center p-1 sm:p-1.5 rounded-2xl transition-all duration-200 group text-zinc-400 hover:text-white cursor-pointer active:scale-95"
             title="Menu & Studio Settings"
           >
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700 group-hover:bg-zinc-850">
-              <Menu className="w-5 h-5 text-zinc-300 group-hover:text-white" />
+            <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all bg-zinc-900 border border-zinc-800 group-hover:border-zinc-700 group-hover:bg-zinc-850">
+              <Menu className="w-4 h-4 sm:w-5 sm:h-5 text-zinc-300 group-hover:text-white" />
             </div>
             <span className="text-[10px] font-medium mt-1 text-center">
               Menu
@@ -159,4 +159,5 @@ export const BottomNav: React.FC<BottomNavProps> = ({
     </nav>
   );
 };
+
 

@@ -3,7 +3,8 @@ import {
   Zap, 
   Target, 
   Layers, 
-  SlidersHorizontal
+  SlidersHorizontal,
+  Globe
 } from 'lucide-react';
 import { PlatformId, ToneId, GoalId } from '../types';
 import { ActiveCategory } from './BottomNav';
@@ -50,9 +51,6 @@ export const CategoryStoriesBar: React.FC<CategoryStoriesBarProps> = ({
             Strategy Parameters
           </span>
         </div>
-        <span className="text-[11px] text-muted-foreground font-medium hidden sm:inline">
-          Tap any item to change
-        </span>
       </div>
 
       {/* Balanced 4-Column Strategy Grid */}
@@ -65,13 +63,13 @@ export const CategoryStoriesBar: React.FC<CategoryStoriesBarProps> = ({
           disabled={disabled}
           onClick={() => onOpenCategory('platform')}
           title="Choose Platform"
-          className={`flex flex-col items-center gap-1.5 p-2 sm:p-2.5 rounded-xl bg-secondary/70 hover:bg-secondary border ${platStyle.border} transition-colors text-center cursor-pointer shadow-sm`}
+          className={`flex flex-col items-center gap-1.5 p-2 sm:p-3 rounded-xl bg-secondary/70 hover:bg-secondary border ${platStyle.border} transition-colors text-center cursor-pointer shadow-sm`}
         >
-          <div className={`w-10 h-10 rounded-full ${platStyle.bg} flex items-center justify-center text-xs font-black ${platStyle.text} shadow-md`}>
+          <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full ${platStyle.bg} flex items-center justify-center text-xs font-black ${platStyle.text} shadow-md`}>
             <span>{platStyle.code}</span>
           </div>
           <div className="w-full">
-            <p className="text-[11px] font-bold text-foreground truncate">{platform}</p>
+            <p className="text-xs font-bold text-foreground truncate">{platform}</p>
             <p className="text-[9px] text-muted-foreground font-mono">Platform</p>
           </div>
         </button>
@@ -82,13 +80,13 @@ export const CategoryStoriesBar: React.FC<CategoryStoriesBarProps> = ({
           type="button"
           disabled={disabled}
           onClick={() => onOpenCategory('tone')}
-          className="flex flex-col items-center gap-1.5 p-2 sm:p-2.5 rounded-xl bg-purple-500/5 hover:bg-purple-500/10 border border-purple-500/30 hover:border-purple-500/50 transition-colors text-center cursor-pointer shadow-sm"
+          className="flex flex-col items-center gap-1.5 p-2 sm:p-3 rounded-xl bg-purple-500/5 hover:bg-purple-500/10 border border-purple-500/30 hover:border-purple-500/50 transition-colors text-center cursor-pointer shadow-sm"
         >
-          <div className="w-10 h-10 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-600 dark:text-purple-400 shadow-sm">
+          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-purple-500/20 border border-purple-500/40 flex items-center justify-center text-purple-600 dark:text-purple-400 shadow-sm">
             <Layers className="w-4 h-4" />
           </div>
           <div className="w-full">
-            <p className="text-[11px] font-bold text-foreground truncate capitalize">
+            <p className="text-xs font-bold text-foreground truncate capitalize">
               {tone.replace('-', ' ')}
             </p>
             <p className="text-[9px] text-purple-600 dark:text-purple-400 font-mono">Tone</p>
@@ -101,32 +99,32 @@ export const CategoryStoriesBar: React.FC<CategoryStoriesBarProps> = ({
           type="button"
           disabled={disabled}
           onClick={() => onOpenCategory('goal')}
-          className="flex flex-col items-center gap-1.5 p-2 sm:p-2.5 rounded-xl bg-emerald-500/5 hover:bg-emerald-500/10 border border-emerald-500/30 hover:border-emerald-500/50 transition-colors text-center cursor-pointer shadow-sm"
+          className="flex flex-col items-center gap-1.5 p-2 sm:p-3 rounded-xl bg-emerald-500/5 hover:bg-emerald-500/10 border border-emerald-500/30 hover:border-emerald-500/50 transition-colors text-center cursor-pointer shadow-sm"
         >
-          <div className="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
+          <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
             <Target className="w-4 h-4" />
           </div>
           <div className="w-full">
-            <p className="text-[11px] font-bold text-foreground truncate capitalize">
+            <p className="text-xs font-bold text-foreground truncate capitalize">
               {goal.replace('-', ' ')}
             </p>
             <p className="text-[9px] text-emerald-600 dark:text-emerald-400 font-mono">Goal</p>
           </div>
         </button>
 
-        {/* 4. Turbo Toggle (Amber Energy Accent) */}
+        {/* 4. Turbo Toggle (AI Engine) */}
         <button
           id="circle-story-turbo"
           type="button"
           disabled={disabled}
           onClick={onTurboToggle}
-          className={`flex flex-col items-center gap-1.5 p-2 sm:p-2.5 rounded-xl border transition-colors text-center cursor-pointer shadow-sm ${
+          className={`flex flex-col items-center gap-1.5 p-2 sm:p-3 rounded-xl border transition-colors text-center cursor-pointer shadow-sm ${
             isTurbo 
               ? 'bg-amber-500/10 border-amber-500/40 hover:border-amber-500 text-foreground' 
               : 'bg-secondary/70 hover:bg-secondary border-border text-foreground'
           }`}
         >
-          <div className={`w-10 h-10 rounded-full flex items-center justify-center shadow-sm ${
+          <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center shadow-sm ${
             isTurbo 
               ? 'bg-amber-500 text-black' 
               : 'bg-secondary border border-border text-muted-foreground'
@@ -134,7 +132,7 @@ export const CategoryStoriesBar: React.FC<CategoryStoriesBarProps> = ({
             <Zap className={`w-4 h-4 ${isTurbo ? 'fill-black text-black' : 'text-muted-foreground'}`} />
           </div>
           <div className="w-full">
-            <p className={`text-[11px] font-bold truncate ${isTurbo ? 'text-amber-600 dark:text-amber-400' : 'text-foreground'}`}>
+            <p className={`text-xs font-bold truncate ${isTurbo ? 'text-amber-600 dark:text-amber-400' : 'text-foreground'}`}>
               {isTurbo ? '⚡ Turbo' : 'Deep'}
             </p>
             <p className="text-[9px] text-muted-foreground font-mono">AI Engine</p>
@@ -145,4 +143,5 @@ export const CategoryStoriesBar: React.FC<CategoryStoriesBarProps> = ({
     </div>
   );
 };
+
 

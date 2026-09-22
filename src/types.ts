@@ -102,3 +102,4 @@ export interface Language {
   category?: 'popular' | 'indian' | 'americas' | 'europe' | 'asia' | 'middle-east' | 'global';
   badge?: string;
 }
+

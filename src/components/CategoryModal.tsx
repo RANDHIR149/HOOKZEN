@@ -22,6 +22,7 @@ interface CategoryModalProps {
   disabled?: boolean;
 }
 
+
 const PLATFORMS: { id: PlatformId; label: string; formatBadge: string; sublabel: string }[] = [
   { id: 'Instagram', label: 'Instagram Reels & Posts', formatBadge: '9:16 / 1:1', sublabel: 'Explore algorithm, visual hooks & audio pairing' },
   { id: 'TikTok', label: 'TikTok Feed', formatBadge: '9:16 Fullscreen', sublabel: 'High-velocity 0-3s retention & trending sounds' },

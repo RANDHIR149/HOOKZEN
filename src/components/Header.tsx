@@ -3,6 +3,7 @@ import { RotateCcw, Sun, Moon } from 'lucide-react';
 import { LanguageSelector } from './LanguageSelector';
 import { Language } from '../types';
 import { ThemeMode } from './MenuModal';
+import { HookJainLogo } from './HookJainLogo';
 
 interface HeaderProps {
   languages: Language[];
@@ -26,20 +27,18 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header id="main-header" className="sticky top-0 z-40 w-full border-b border-zinc-800/80 bg-black/95 backdrop-blur-xl transition-all">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3 sm:gap-4">
-        {/* Brand Logo Mark Only (No Text) */}
+        {/* Brand Logo Mark */}
         <div className="flex items-center gap-3">
           <div 
             id="brand-logo-mark"
-            className="w-10 h-10 rounded-2xl bg-zinc-900 border border-zinc-700/80 hover:border-zinc-500 text-white flex items-center justify-center font-black text-sm tracking-tighter shadow-md transition-all cursor-pointer group"
-            title="AI Studio"
+            className="group cursor-pointer transition-transform active:scale-95"
+            title="Hook Jain AI Studio"
           >
-            <span className="bg-gradient-to-br from-white via-zinc-200 to-zinc-400 bg-clip-text text-transparent group-hover:scale-105 transition-transform">
-              VV
-            </span>
+            <HookJainLogo className="w-10 h-10 rounded-2xl border border-zinc-700/80 group-hover:border-zinc-500 shadow-md" />
           </div>
           <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-zinc-900/90 border border-zinc-800 text-[10px] font-mono text-zinc-400">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="text-zinc-300 font-semibold uppercase tracking-wider">AI Studio</span>
+            <span className="text-zinc-300 font-semibold uppercase tracking-wider">Hook Jain</span>
           </div>
         </div>
 

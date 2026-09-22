@@ -6,7 +6,7 @@ import {
   MediaType, 
   ViralContent, 
   AnalysisHistoryItem, 
-  Language 
+  Language
 } from './types';
 import { Header } from './components/Header';
 import { MediaUpload } from './components/MediaUpload';
