@@ -1,0 +1,8 @@
+{
+  "name": "Remix VIRAL VISION",
+  "description": "Professional AI-powered viral content analyzer for social media. Generate hooks, captions, and hashtags in 25+ languages.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

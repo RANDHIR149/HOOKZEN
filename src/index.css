@@ -1,0 +1,329 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+@layer base {
+  html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #08090d;
+    color: #f1f5f9;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* =========================================================================
+   LIGHT THEME: COMPLETE HIGH-CONTRAST WHITE & BLACK TRANSFORMATION
+   ========================================================================= */
+
+html.light-theme,
+html.light-theme body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light-theme .min-h-screen {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Header */
+html.light-theme header#main-header {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06) !important;
+}
+
+html.light-theme #brand-logo-mark {
+  background-color: #0f172a !important;
+  border-color: #1e293b !important;
+  color: #ffffff !important;
+}
+
+html.light-theme #brand-logo-mark span {
+  background: none !important;
+  -webkit-text-fill-color: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Card Surfaces & Backgrounds */
+html.light-theme .bg-black {
+  background-color: #f8fafc !important;
+}
+
+html.light-theme .bg-zinc-950,
+html.light-theme .bg-zinc-950\/95,
+html.light-theme .bg-zinc-950\/90,
+html.light-theme .bg-zinc-950\/80,
+html.light-theme .bg-zinc-950\/70,
+html.light-theme .bg-zinc-950\/60 {
+  background-color: #ffffff !important;
+}
+
+html.light-theme .bg-zinc-900,
+html.light-theme .bg-zinc-900\/95,
+html.light-theme .bg-zinc-900\/90,
+html.light-theme .bg-zinc-900\/80,
+html.light-theme .bg-zinc-900\/70,
+html.light-theme .bg-zinc-900\/60,
+html.light-theme .bg-zinc-900\/50,
+html.light-theme .bg-zinc-900\/40,
+html.light-theme .bg-zinc-900\/30 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light-theme .bg-zinc-850,
+html.light-theme .bg-zinc-800,
+html.light-theme .bg-zinc-800\/80,
+html.light-theme .bg-zinc-800\/60 {
+  background-color: #e2e8f0 !important;
+}
+
+html.light-theme .hover\:bg-zinc-850:hover,
+html.light-theme .hover\:bg-zinc-800:hover,
+html.light-theme .hover\:bg-zinc-900:hover,
+html.light-theme .hover\:bg-zinc-900\/80:hover {
+  background-color: #e2e8f0 !important;
+}
+
+/* Borders */
+html.light-theme .border-zinc-900,
+html.light-theme .border-zinc-850,
+html.light-theme .border-zinc-800,
+html.light-theme .border-zinc-800\/80,
+html.light-theme .border-zinc-750,
+html.light-theme .border-zinc-700,
+html.light-theme .border-zinc-700\/80,
+html.light-theme .border-zinc-600 {
+  border-color: #cbd5e1 !important;
+}
+
+html.light-theme .hover\:border-zinc-700:hover,
+html.light-theme .hover\:border-zinc-600:hover,
+html.light-theme .hover\:border-zinc-500:hover {
+  border-color: #94a3b8 !important;
+}
+
+html.light-theme .divide-zinc-800 > * + *,
+html.light-theme .divide-zinc-850 > * + * {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography */
+html.light-theme .text-white,
+html.light-theme .text-zinc-100,
+html.light-theme .text-zinc-200 {
+  color: #0f172a !important;
+}
+
+html.light-theme .text-zinc-300,
+html.light-theme .text-zinc-400 {
+  color: #475569 !important;
+}
+
+html.light-theme .text-zinc-500 {
+  color: #64748b !important;
+}
+
+/* Primary Action Buttons (Invert White in Dark Mode to Black in Light Mode) */
+html.light-theme button.bg-white,
+html.light-theme .bg-white {
+  background-color: #0f172a !important;
+  color: #ffffff !important;
+}
+
+html.light-theme button.bg-white:hover {
+  background-color: #1e293b !important;
+}
+
+html.light-theme button.bg-white svg,
+html.light-theme .bg-white svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+html.light-theme .bg-white span {
+  color: #ffffff !important;
+}
+
+/* Form Inputs, Selects, and Textareas */
+html.light-theme input,
+html.light-theme textarea,
+html.light-theme select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light-theme input::placeholder,
+html.light-theme textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Floating Bottom Navigation Bar */
+html.light-theme #bottom-dock-navigation .bg-zinc-950\/95 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+html.light-theme #bottom-dock-navigation .bg-zinc-900 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light-theme #bottom-dock-navigation .text-zinc-400 {
+  color: #64748b !important;
+}
+
+html.light-theme #bottom-dock-navigation .text-zinc-300 {
+  color: #1e293b !important;
+}
+
+/* Modals, Drawers & Dialogs */
+html.light-theme .bg-black\/80,
+html.light-theme .bg-black\/85,
+html.light-theme .bg-black\/90 {
+  background-color: rgba(15, 23, 42, 0.55) !important;
+}
+
+html.light-theme [role="dialog"],
+html.light-theme .fixed.inset-y-0.right-0 {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Language Selector Dropdown in Light Theme */
+html.light-theme #language-dropdown-menu {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+html.light-theme #language-dropdown-menu .bg-zinc-950,
+html.light-theme #language-dropdown-menu .bg-zinc-950\/90 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light-theme #language-dropdown-menu .bg-zinc-900,
+html.light-theme #language-dropdown-menu .bg-zinc-900\/90 {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light-theme #language-dropdown-menu .bg-zinc-900\/90:hover,
+html.light-theme #language-dropdown-menu .hover\:bg-zinc-800\/90:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light-theme #language-dropdown-menu input {
+  background-color: #ffffff !important;
+  border-color: #cbd5e1 !important;
+  color: #0f172a !important;
+}
+
+html.light-theme #language-dropdown-menu .text-white {
+  color: #0f172a !important;
+}
+
+html.light-theme #language-dropdown-menu .text-zinc-400 {
+  color: #475569 !important;
+}
+
+/* Progress bars in Light Mode */
+html.light-theme .bg-zinc-800 .bg-white {
+  background-color: #0f172a !important;
+}
+
+/* Dropzone in Light Mode */
+html.light-theme .border-dashed {
+  border-color: #94a3b8 !important;
+  background-color: #ffffff !important;
+}
+
+/* Grid & ambient styling */
+html.light-theme .bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px) !important;
+}
+
+html.light-theme .bg-ambient-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.04) 0%, transparent 60%) !important;
+}
+
+/* Precision scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+html.light-theme ::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+html.light-theme ::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.28) !important;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+html.light-theme .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Subtle background grid pattern for dark mode */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.bg-ambient-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 60%);
+}
+
